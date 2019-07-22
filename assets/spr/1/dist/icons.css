@@ -1,0 +1,168 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-appstore {
+  background-image: url(/img/icons.png);
+  background-position: -353px -925px;
+  width: 349px;
+  height: 112px;
+}
+.icon-audio {
+  background-image: url(/img/icons.png);
+  background-position: -1326px -583px;
+  width: 87px;
+  height: 87px;
+}
+.icon-book-1 {
+  background-image: url(/img/icons.png);
+  background-position: -529px -702px;
+  width: 365px;
+  height: 115px;
+}
+.icon-book-2 {
+  background-image: url(/img/icons.png);
+  background-position: 0px -556px;
+  width: 730px;
+  height: 144px;
+}
+.icon-float-1 {
+  background-image: url(/img/icons.png);
+  background-position: -896px -702px;
+  width: 186px;
+  height: 92px;
+}
+.icon-float-2 {
+  background-image: url(/img/icons.png);
+  background-position: 0px -1211px;
+  width: 179px;
+  height: 121px;
+}
+.icon-float-3 {
+  background-image: url(/img/icons.png);
+  background-position: -1326px -490px;
+  width: 168px;
+  height: 91px;
+}
+.icon-game {
+  background-image: url(/img/icons.png);
+  background-position: -1110px -428px;
+  width: 206px;
+  height: 206px;
+}
+.icon-google {
+  background-image: url(/img/icons.png);
+  background-position: 0px -925px;
+  width: 351px;
+  height: 114px;
+}
+.icon-invite-1 {
+  background-image: url(/img/icons.png);
+  background-position: -269px -702px;
+  width: 258px;
+  height: 185px;
+}
+.icon-invite-2 {
+  background-image: url(/img/icons.png);
+  background-position: -1110px 0px;
+  width: 214px;
+  height: 215px;
+}
+.icon-invite-3 {
+  background-image: url(/img/icons.png);
+  background-position: 0px -1041px;
+  width: 228px;
+  height: 168px;
+}
+.icon-item-1 {
+  background-image: url(/img/icons.png);
+  background-position: 0px 0px;
+  width: 286px;
+  height: 554px;
+}
+.icon-item-2 {
+  background-image: url(/img/icons.png);
+  background-position: -576px 0px;
+  width: 285px;
+  height: 554px;
+}
+.icon-item-3 {
+  background-image: url(/img/icons.png);
+  background-position: -288px 0px;
+  width: 286px;
+  height: 554px;
+}
+.icon-item-4 {
+  background-image: url(/img/icons.png);
+  background-position: -1326px 0px;
+  width: 177px;
+  height: 173px;
+}
+.icon-luck-1 {
+  background-image: url(/img/icons.png);
+  background-position: -1110px -217px;
+  width: 211px;
+  height: 209px;
+}
+.icon-luck-2 {
+  background-image: url(/img/icons.png);
+  background-position: -230px -1041px;
+  width: 215px;
+  height: 116px;
+}
+.icon-luck-3 {
+  background-image: url(/img/icons.png);
+  background-position: -1326px -175px;
+  width: 169px;
+  height: 164px;
+}
+.icon-video {
+  background-image: url(/img/icons.png);
+  background-position: -1326px -341px;
+  width: 147px;
+  height: 147px;
+}
+.icon-yuyue-1 {
+  background-image: url(/img/icons.png);
+  background-position: -1110px -636px;
+  width: 203px;
+  height: 206px;
+}
+.icon-yuyue-2 {
+  background-image: url(/img/icons.png);
+  background-position: -863px -259px;
+  width: 220px;
+  height: 215px;
+}
+.icon-yuyue-3 {
+  background-image: url(/img/icons.png);
+  background-position: -863px -476px;
+  width: 209px;
+  height: 221px;
+}
+.icon-yuyue-4 {
+  background-image: url(/img/icons.png);
+  background-position: 0px -702px;
+  width: 267px;
+  height: 221px;
+}
+.icon-yuyue-5 {
+  background-image: url(/img/icons.png);
+  background-position: -863px 0px;
+  width: 245px;
+  height: 257px;
+}

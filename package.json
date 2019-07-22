@@ -1,25 +1,29 @@
 {
-  "name": "test",
+  "name": "webpack-test",
   "version": "1.0.0",
-  "description": "My Project",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "devDependencies": {
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "px2rem-loader": "^0.1.9",
+    "style-loader": "^0.23.1",
+    "vue-loader": "^15.7.1",
+    "webpack-spritesmith": "^1.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "sprite": "webpack --env.NODE_ENV=sprite"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Chanjayla/test.git"
-  },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Chanjayla/test/issues"
-  },
-  "homepage": "https://github.com/Chanjayla/test#readme",
-  "dependencies": {
-    "echarts": "^4.2.1"
-  }
+  "license": "ISC"
 }
