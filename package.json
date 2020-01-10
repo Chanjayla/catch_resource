@@ -1,29 +1,33 @@
 {
-  "name": "webpack-test",
+  "name": "builder",
   "version": "1.0.0",
   "description": "",
-  "private": true,
-  "dependencies": {
-    "express": "^4.17.1",
-    "lodash": "^4.17.15",
-    "webpack": "^4.36.1",
-    "webpack-cli": "^3.3.6"
-  },
-  "devDependencies": {
-    "css-loader": "^3.1.0",
-    "file-loader": "^4.1.0",
-    "imagemin-webpack-plugin": "^2.4.2",
-    "px2rem-loader": "^0.1.9",
-    "style-loader": "^0.23.1",
-    "vue-loader": "^15.7.1",
-    "webpack-spritesmith": "^1.0.1"
-  },
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "sprite": "webpack --env.NODE_ENV=sprite"
+    "dev": "webpack-dev-server --progress --config webpack.config.js --hot",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "autoprefixer": "^9.7.3",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^3.4.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.1.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+  }
 }

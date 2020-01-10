@@ -1,42 +1,64 @@
-const path = require('path');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack')
+module.exports = {
+    entry: {
+        app: "./app/main.js"
+    },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, "build"),
+        publicPath: "",
+        filename: "bundle.js"
+    },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
+    },
+    devServer: {
+        inline: false,
+        compress: true
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader'
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: "css-loader!postcss-loader",
+                    publicPath: '/'
+                })
+            },
+            {
+                test: /\.(svg|ttf|woff|woff2)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
+            {
+                test: /\.(jpg|png|gif)$/,
+                loader: 'url-loader?limit=8192&name=img/pc/[name].[ext]'
+            }
+        ]
+    },
+    plugins: [
+        new ExtractTextPlugin({
+            filename: 'css/[name].css'
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'index.html'),
+            filename: 'index.html',
+            chunks: ['app']
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    optimization: {
 
-module.exports = env => {
-    let extraPlugin = [];
-    if(env.NODE_ENV === 'sprite') {     
-        const spriteConfig = require('./build/csssprite');
-        extraPlugin = extraPlugin.concat(spriteConfig);
-    }
-    return {
-        entry: './src/index.js',
-        output: {
-            filename: 'bundle.js',
-            path: path.resolve(__dirname,'dist')
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.css$/,
-                    use: [
-                        'style-loader',
-                        'css-loader'
-                    ]
-                },
-                {
-                    test: /\.(jpg|png|gif|svg)$/,
-                    use: [
-                        'file-loader'
-                    ]
-                },
-                {
-                    test: /\.vue$/,
-                    use: [
-                        'vue-loader'
-                    ]
-                }
-            ]
-        },
-        plugins: [
-            
-        ].concat(extraPlugin)
     }
 }
